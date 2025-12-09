@@ -8,6 +8,7 @@ import DealFlow from './pages/DealFlow';
 import Team from './pages/Team';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
+import DevNotes from './pages/DevNotes';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="team" element={<Team />} />
         <Route path="pricing" element={<Pricing />} />
         <Route path="contact" element={<Contact />} />
+        <Route path="notes" element={<DevNotes />} />
       </Route>
     </Routes>
   );

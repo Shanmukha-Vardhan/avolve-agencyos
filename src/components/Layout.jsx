@@ -9,7 +9,8 @@ import {
   Mail,
   Hexagon,
   Users,
-  Wand2
+  Wand2,
+  FileText
 } from 'lucide-react';
 import '../styles/Layout.css';
 import { motion } from 'framer-motion';
@@ -25,6 +26,7 @@ const Layout = () => {
     { path: '/team', icon: Users, label: 'Team' },
     { path: '/pricing', icon: CreditCard, label: 'Pricing' },
     { path: '/contact', icon: Mail, label: 'Contact' },
+    { path: '/notes', icon: FileText, label: 'Dev Notes' },
   ];
 
   return (
