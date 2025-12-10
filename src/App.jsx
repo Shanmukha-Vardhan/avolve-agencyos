@@ -11,6 +11,8 @@ import Contact from './pages/Contact';
 import DevNotes from './pages/DevNotes';
 import Invoices from './pages/Invoices';
 import Calendar from './pages/Calendar';
+import Clients from './pages/Clients';
+import Documents from './pages/Documents';
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
         <Route index element={<Home />} />
         <Route path="onboarding" element={<Onboarding />} />
         <Route path="projects" element={<Projects />} />
+        <Route path="documents" element={<Documents />} />
         <Route path="dealflow" element={<DealFlow />} />
+        <Route path="clients" element={<Clients />} />
         <Route path="team" element={<Team />} />
         <Route path="pricing" element={<Pricing />} />
         <Route path="contact" element={<Contact />} />

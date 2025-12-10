@@ -12,7 +12,9 @@ import {
   Wand2,
   FileText,
   Receipt,
-  Calendar as CalendarIcon
+  Calendar as CalendarIcon,
+  Building2,
+  FolderOpen
 } from 'lucide-react';
 import '../styles/Layout.css';
 import { motion } from 'framer-motion';
@@ -24,7 +26,9 @@ const Layout = () => {
     { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
     { path: '/onboarding', icon: UserPlus, label: 'Onboarding' },
     { path: '/projects', icon: KanbanSquare, label: 'Projects' },
+    { path: '/documents', icon: FolderOpen, label: 'Documents' },
     { path: '/dealflow', icon: Wand2, label: 'DealFlow AI' },
+    { path: '/clients', icon: Building2, label: 'Clients' },
     { path: '/team', icon: Users, label: 'Team' },
     { path: '/invoices', icon: Receipt, label: 'Invoices' },
     { path: '/calendar', icon: CalendarIcon, label: 'Calendar' },
