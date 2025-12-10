@@ -10,7 +10,8 @@ import {
   Hexagon,
   Users,
   Wand2,
-  FileText
+  FileText,
+  Receipt
 } from 'lucide-react';
 import '../styles/Layout.css';
 import { motion } from 'framer-motion';
@@ -24,6 +25,7 @@ const Layout = () => {
     { path: '/projects', icon: KanbanSquare, label: 'Projects' },
     { path: '/dealflow', icon: Wand2, label: 'DealFlow AI' },
     { path: '/team', icon: Users, label: 'Team' },
+    { path: '/invoices', icon: Receipt, label: 'Invoices' },
     { path: '/pricing', icon: CreditCard, label: 'Pricing' },
     { path: '/contact', icon: Mail, label: 'Contact' },
     { path: '/notes', icon: FileText, label: 'Dev Notes' },
