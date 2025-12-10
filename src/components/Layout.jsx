@@ -11,7 +11,8 @@ import {
   Users,
   Wand2,
   FileText,
-  Receipt
+  Receipt,
+  Calendar as CalendarIcon
 } from 'lucide-react';
 import '../styles/Layout.css';
 import { motion } from 'framer-motion';
@@ -26,6 +27,7 @@ const Layout = () => {
     { path: '/dealflow', icon: Wand2, label: 'DealFlow AI' },
     { path: '/team', icon: Users, label: 'Team' },
     { path: '/invoices', icon: Receipt, label: 'Invoices' },
+    { path: '/calendar', icon: CalendarIcon, label: 'Calendar' },
     { path: '/pricing', icon: CreditCard, label: 'Pricing' },
     { path: '/contact', icon: Mail, label: 'Contact' },
     { path: '/notes', icon: FileText, label: 'Dev Notes' },

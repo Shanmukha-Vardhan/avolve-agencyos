@@ -1,0 +1,218 @@
+.calendar-page {
+    animation: fadeIn 0.5s ease-out;
+    height: calc(100vh - 64px);
+    display: flex;
+    flex-direction: column;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.calendar-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 24px;
+    flex: 1;
+    min-height: 0;
+}
+
+/* Main Calendar Section */
+.main-calendar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.calendar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.nav-controls {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.nav-btn {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    color: var(--text-main);
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.weekdays-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 12px;
+}
+
+.weekday-header {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 8px;
+}
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    flex: 1;
+}
+
+.calendar-day {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 0;
+    /* allows flex shrink */
+    position: relative;
+    overflow: hidden;
+}
+
+.calendar-day:hover {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-day.today {
+    border: 1px solid var(--primary);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.day-number {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    align-self: flex-start;
+}
+
+.calendar-day.today .day-number {
+    color: var(--primary);
+}
+
+.calendar-day.another-month {
+    opacity: 0.3;
+}
+
+/* Event Pills in Grid */
+.day-events {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow-y: auto;
+}
+
+.event-pill {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-left: 2px solid;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Sidebar */
+.events-sidebar {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.upcoming-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+    overflow-y: auto;
+}
+
+.sidebar-event-card {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    padding: 16px;
+    border-radius: 16px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.sidebar-event-card:hover {
+    transform: translateX(4px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.date-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 8px 12px;
+    border-radius: 12px;
+    text-align: center;
+    min-width: 54px;
+}
+
+.date-day {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.date-month {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.event-info h4 {
+    font-size: 0.95rem;
+    margin-bottom: 2px;
+}
+
+.event-info p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}

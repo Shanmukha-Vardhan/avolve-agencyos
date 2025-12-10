@@ -10,6 +10,7 @@ import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
 import DevNotes from './pages/DevNotes';
 import Invoices from './pages/Invoices';
+import Calendar from './pages/Calendar';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="pricing" element={<Pricing />} />
         <Route path="contact" element={<Contact />} />
         <Route path="invoices" element={<Invoices />} />
+        <Route path="calendar" element={<Calendar />} />
         <Route path="notes" element={<DevNotes />} />
       </Route>
     </Routes>
